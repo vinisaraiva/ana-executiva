@@ -1,4 +1,6 @@
-project_id = "uhixhpdpmdehmeolwfen"
+# Não vincular este código ao Supabase do GeFIN.
+# Substituir pelo project ref do Supabase EXCLUSIVO da Ana antes de deploy.
+project_id = "ana-executiva-local"
 
 [functions.upload-file]
 verify_jwt = false
