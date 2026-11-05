@@ -1,0 +1,6 @@
+import { Link } from "react-router-dom";
+import { FileText, ShieldCheck, Sparkles } from "lucide-react";
+export default function LegalNotices({kind}:{kind:"privacy"|"terms"}){
+const privacy=kind==="privacy";
+return <main className="min-h-screen bg-background px-6 py-12 text-foreground"><div className="mx-auto max-w-2xl"><Link to="/" className="mb-10 inline-flex items-center gap-2 text-xl font-bold"><Sparkles className="text-primary"/>Ana Executiva</Link><div className="rounded-3xl border bg-card p-8">{privacy?<ShieldCheck className="mb-4 text-primary" size={32}/>:<FileText className="mb-4 text-primary" size={32}/>}<h1 className="text-3xl font-bold">{privacy?"Aviso de privacidade":"Termos de serviço"}</h1><p className="mt-4 leading-relaxed text-muted-foreground">Este documento está em elaboração para a Ana Executiva. As políticas do GeFIN não são aplicáveis automaticamente ao novo produto.</p><p className="mt-4 text-sm text-muted-foreground">A versão comercial não deve ser lançada nem coletar dados reais de correspondências antes de publicar os termos específicos, informar finalidades e bases legais de tratamento e implementar os controles de privacidade previstos.</p><Link to="/" className="mt-8 inline-block text-sm font-medium text-primary underline">Voltar à página inicial</Link></div></div></main>;
+}
